@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "b6744a97-aca2-43b3-be3f-bcd9307cb7cc",
+		"name": "Spring Boot Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22634830"
+	},
+	"item": [
+		{
+			"name": "Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Seq",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/:seq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						":seq"
+					],
+					"variable": [
+						{
+							"key": "seq",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"seq\": 3,\r\n    \"waiter\": \"herry\",\r\n    \"mealList\": [\r\n        {\r\n            \"name\": \"Popcorn\",\r\n            \"price\": 50,\r\n            \"description\": \"Delicious!\"\r\n        },\r\n        {\r\n            \"name\": \"Cola\",\r\n            \"price\": 45,\r\n            \"description\": \"very tasty!\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"seq\": 1,\r\n    \"waiter\": \"herry\",\r\n    \"mealList\": [\r\n        {\r\n            \"name\": \"Popcorn\",\r\n            \"price\": 50,\r\n            \"description\": \"Delicious!\"\r\n        },\r\n        {\r\n            \"name\": \"Cola\",\r\n            \"price\": 50,\r\n            \"description\": \"very tasty!\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/:seq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						":seq"
+					],
+					"variable": [
+						{
+							"key": "seq",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/:seq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						":seq"
+					],
+					"variable": [
+						{
+							"key": "seq",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
